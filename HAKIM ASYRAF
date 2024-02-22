@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cmath>
+//Add cmath into the coding
+using namespace std;
+
+int main() {
+	int choice;
+	double radius, length, width, area;
+	const double PI = 3.142;
+	// PI didn't being included
+	
+	cout << "Choose a shape to calculate its area:" << endl;
+	cout << "1. Circle" << endl;
+	cout << "2. Rectangle" << endl;
+	cout << "Enter your choice (1 or 2): ";
+	cin >> choice;
+	
+	if (choice == 1) {
+		cout << "Enter the radius of the circle: ";
+		cin >> radius;
+		
+		area = PI * pow(radius, 2);
+		cout << "Area of the circle is: " << area << endl;
+		// area and endl must not be combined because it's of non-class type 'double'
+	}
+else if (choice == 2) {
+	cout << "Enter the length and width of the rectangle: ";
+    cout << "Enter the length of the rectangle: ";
+    cin >> length;
+    // cin in the wrong direction
+    cout << "Enter the width of the rectangle: ";
+    cin >> width;
+    // cin in the wrong direction
+    if ((length < 0) || ((width < 0)))
+        cout << "Invalid input. Length and width cannot be negative." << endl;
+    
+    area = length * width; // Calculate area of the rectangle
+    cout << "Area of the rectangle is: " << area << endl;
+   }
+else 
+    cout  << "Invalid choice. Please enter 1 or 2." << endl;
+// end of it
+
+return 0;
+}//end of the main function
